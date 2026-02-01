@@ -1,5 +1,10 @@
 # Assignment No 2: Android Intents
 
+**Name:** Muhammad Usman  
+**Roll No:** 100045  
+**Session:** GCUF (2023–2027)  
+**Course:** Mobile App Development 
+
 ## 📋 Project Overview
 
 This Android application demonstrates **all Intent flavors and communication types**.
@@ -199,7 +204,3 @@ This assignment demonstrates:
 - ✅ Proper Manifest configuration
 - ✅ Error handling for missing apps
 
----
-
-## 👨‍💻 Author
-Mouzan Raza
