@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.assignment2">
+
+    <!-- Permissions -->
+    <!-- Permission to make phone calls (for dialer intent) -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    
+    <!-- Permission to access internet (if needed for sharing) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Intents Assignment"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- MainActivity - Main launcher activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- Action: MAIN - Entry point of the app -->
+                <action android:name="android.intent.action.MAIN" />
+                
+                <!-- Category: LAUNCHER - Show in app launcher -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- SecondActivity - Receives data from MainActivity -->
+        <activity
+            android:name=".SecondActivity"
+            android:exported="false"
+            android:label="Second Activity"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <!-- Category: DEFAULT - Can be started by implicit intents -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- MyService - Background service -->
+        <service
+            android:name=".MyService"
+            android:exported="false"
+            android:enabled="true">
+            <!-- Service doesn't need intent-filter as it's started explicitly -->
+        </service>
+
+        <!-- MyReceiver - BroadcastReceiver for custom broadcasts -->
+        <receiver
+            android:name=".MyReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <!-- Action: Custom broadcast action -->
+                <action android:name="com.example.assignment2.CUSTOM_BROADCAST" />
+                
+                <!-- Category: Custom category -->
+                <category android:name="com.example.assignment2.CATEGORY_CUSTOM" />
+                
+                <!-- Category: DEFAULT - Required for broadcast receivers -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

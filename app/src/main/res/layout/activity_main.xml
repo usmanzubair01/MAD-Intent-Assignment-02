@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Android Intents Assignment"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Subtitle TextView -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demonstrating All Intent Types"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button 1: Activity to Activity -->
+    <Button
+        android:id="@+id/btnActivityToActivity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1. Activity → Activity\n(Explicit Intent + Extras + Flags)"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button 2: Activity to Service -->
+    <Button
+        android:id="@+id/btnActivityToService"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="2. Activity → Service\n(Start Service with Extras)"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnActivityToActivity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button 3: Activity to System App -->
+    <Button
+        android:id="@+id/btnActivityToSystem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="3. Activity → System App\n(Phone Dialer with URI + Category)"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnActivityToService"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button 4: Activity to Other App -->
+    <Button
+        android:id="@+id/btnActivityToOtherApp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4. Activity → Other App\n(Share Text via Intent)"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnActivityToSystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button 5: Activity to Broadcast -->
+    <Button
+        android:id="@+id/btnActivityToBroadcast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="5. Activity → Broadcast\n(Custom Broadcast + Receiver)"
+        android:textSize="14sp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnActivityToOtherApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Footer Info -->
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click any button to test Intent communication"
+        android:textSize="12sp"
+        android:textColor="#9E9E9E"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
